@@ -112,3 +112,6 @@ nothing to commit, working tree clean
 - GitHub
 - PowerShell
 
+## Pull Request
+
+Изменения лабораторной работы были интегрированы через GitHub Pull Request.
