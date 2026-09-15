@@ -1,218 +1,226 @@
-\# Лабораторная работа №1 — Git
+# Лабораторная работа №1 — Git
 
+**Фураев Владислав Викторович, группа 221341, вариант 10.**
 
+## Цель работы
 
-\*\*Фураев Владислав Викторович, группа 221341, вариант 10.\*\*
+Освоить систему контроля версий Git: создание репозитория, работу с ветками, создание коммитов, слияние изменений и использование удалённого репозитория GitHub.
 
+## Проект
 
+Учебный Python-проект **«Todo List»**.
 
-\## Цель работы
+Возможности:
+- добавление задач;
+- просмотр задач;
+- выполнение задач;
+- удаление задач;
+- редактирование задач.
 
-
-
-Освоить работу с системой контроля версий Git: создание репозитория, работу с ветками, создание коммитов, слияние изменений и подготовку проекта к публикации.
-
-
-
-\## Проект
-
-
-
-Учебный Python-проект «Todo List».
-
-
-
-Программа представляет собой консольный список задач и поддерживает:
-
-
-
-\- добавление задач;
-
-\- просмотр списка задач;
-
-\- отметку задач как выполненных;
-
-\- удаление задач;
-
-\- редактирование задач.
-
-
-
-\## Запуск проекта
-
-
+## Запуск
 
 ```bash
-
 python todo.py
-
 ```
 
-
-
-\## Использованный сторонний репозиторий
-
-
-
-В качестве основы был выбран открытый GitHub-репозиторий:
-
-
+## Использованный сторонний репозиторий
 
 ```text
-
 https://github.com/SharpRhyme/todo-cli
-
 ```
 
+Репозиторий был клонирован для изучения структуры проекта.
 
-
-Репозиторий был клонирован для изучения структуры проекта и истории Git. Собственный проект разработан отдельно.
-
-
-
-\## Разработка проекта
-
-
-
-В процессе выполнения лабораторной работы были созданы следующие ветки:
-
-
-
-\- `main` — основная ветка проекта;
-
-\- `develop` — ветка разработки;
-
-\- `feature/delete-task` — разработка функции удаления задач;
-
-\- `feature/edit-task` — разработка функции редактирования задач.
-
-
-
-\## История коммитов
-
-
-
-Основные коммиты проекта:
-
-
+## Собственный GitHub-репозиторий
 
 ```text
+https://github.com/DarkSwordman999/lab1_Git
+```
 
+## Ветки проекта
+
+| Ветка | Назначение |
+|---|---|
+| main | Основная версия проекта |
+| develop | Ветка разработки |
+| feature/delete-task | Добавление удаления задач |
+| feature/edit-task | Добавление редактирования задач |
+
+## История коммитов
+
+```text
 feat: add basic todo application
-
 feat: add task deletion
-
 merge: integrate task deletion
-
 feat: add task editing
-
 merge: integrate task editing
-
+docs: add project readme
+chore: add gitignore
 ```
 
+## Слияние веток
 
-
-Сообщения функциональных коммитов выполнены с использованием Conventional Commits.
-
-
-
-\## Слияние веток
-
-
-
-Для объединения функциональных веток использовалось слияние без fast-forward:
-
-
+Использовалась команда:
 
 ```bash
-
 git merge --no-ff
-
 ```
 
-
-
-Были выполнены слияния:
-
-
+Слияния:
 
 ```text
-
-feature/delete-task → develop
-
-feature/edit-task → develop
-
+feature/delete-task -> develop
+feature/edit-task -> develop
 ```
 
-
-
-\## Проверка истории Git
-
-
-
-Для просмотра структуры веток использовалась команда:
-
-
+## Проверка Git
 
 ```bash
-
 git log --oneline --graph --all
-
 ```
-
-
-
-Текущая история разработки:
-
-
 
 ```text
-
-\*   ed40398 (HEAD -> develop) merge: integrate task editing
-
-|| \* d5538fb (feature/edit-task) feat: add task editing
-
+* 07bd416 chore: add gitignore
+* 79fe3c9 docs: add project readme
+*   ed40398 merge: integrate task editing
+|\
+| * d5538fb feat: add task editing
 |/
-
-\*   2525db9 merge: integrate task deletion
-
-|| \* b6d913e (feature/delete-task) feat: add task deletion
-
+*   2525db9 merge: integrate task deletion
+|\
+| * b6d913e feat: add task deletion
 |/
-
-\* 5119548 (main) feat: add basic todo application
-
+* 5119548 feat: add basic todo application
 ```
 
-
-
-\## Проверка состояния проекта
-
-
-
-Для проверки отсутствия незакоммиченных изменений использовалась команда:
-
-
+## Проверка состояния
 
 ```bash
-
 git status
-
 ```
-
-
 
 Результат:
 
-
-
 ```text
-
-On branch develop
-
 nothing to commit, working tree clean
-
 ```
 
+## Технологии
 
+- Python 3
+- Git
+- GitHub
+- PowerShell
+# Лабораторная работа №1 — Git
 
+**Фураев Владислав Викторович, группа 221341, вариант 10.**
+
+## Цель работы
+
+Освоить систему контроля версий Git: создание репозитория, работу с ветками, создание коммитов, слияние изменений и использование удалённого репозитория GitHub.
+
+## Проект
+
+Учебный Python-проект **«Todo List»**.
+
+Возможности:
+- добавление задач;
+- просмотр задач;
+- выполнение задач;
+- удаление задач;
+- редактирование задач.
+
+## Запуск
+
+```bash
+python todo.py
+```
+
+## Использованный сторонний репозиторий
+
+```text
+https://github.com/SharpRhyme/todo-cli
+```
+
+Репозиторий был клонирован для изучения структуры проекта.
+
+## Собственный GitHub-репозиторий
+
+```text
+https://github.com/DarkSwordman999/lab1_Git
+```
+
+## Ветки проекта
+
+| Ветка | Назначение |
+|---|---|
+| main | Основная версия проекта |
+| develop | Ветка разработки |
+| feature/delete-task | Добавление удаления задач |
+| feature/edit-task | Добавление редактирования задач |
+
+## История коммитов
+
+```text
+feat: add basic todo application
+feat: add task deletion
+merge: integrate task deletion
+feat: add task editing
+merge: integrate task editing
+docs: add project readme
+chore: add gitignore
+```
+
+## Слияние веток
+
+Использовалась команда:
+
+```bash
+git merge --no-ff
+```
+
+Слияния:
+
+```text
+feature/delete-task -> develop
+feature/edit-task -> develop
+```
+
+## Проверка Git
+
+```bash
+git log --oneline --graph --all
+```
+
+```text
+* 07bd416 chore: add gitignore
+* 79fe3c9 docs: add project readme
+*   ed40398 merge: integrate task editing
+|\
+| * d5538fb feat: add task editing
+|/
+*   2525db9 merge: integrate task deletion
+|\
+| * b6d913e feat: add task deletion
+|/
+* 5119548 feat: add basic todo application
+```
+
+## Проверка состояния
+
+```bash
+git status
+```
+
+Результат:
+
+```text
+nothing to commit, working tree clean
+```
+
+## Технологии
+
+- Python 3
+- Git
+- GitHub
+- PowerShell
