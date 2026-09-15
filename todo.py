@@ -32,27 +32,47 @@ def delete_task(number):
         print("Неверный номер задачи.")
 
 
+def edit_task(number, new_title):
+    if 1 <= number <= len(tasks):
+        tasks[number - 1]["title"] = new_title
+        print("Задача изменена.")
+    else:
+        print("Неверный номер задачи.")
+
+
 while True:
-    print("\n1 - Показать задачи")
+    print("\nУчебный трекер")
+    print("1 - Показать задачи")
     print("2 - Добавить задачу")
     print("3 - Выполнить задачу")
     print("4 - Удалить задачу")
-    print("5 - Выход")
+    print("5 - Изменить задачу")
+    print("6 - Выход")
 
     choice = input("Выберите действие: ")
 
     if choice == "1":
         show_tasks()
+
     elif choice == "2":
         title = input("Введите задачу: ")
         add_task(title)
+
     elif choice == "3":
         number = int(input("Введите номер задачи: "))
         complete_task(number)
+
     elif choice == "4":
         number = int(input("Введите номер задачи: "))
         delete_task(number)
+
     elif choice == "5":
+        number = int(input("Введите номер задачи: "))
+        new_title = input("Введите новое название: ")
+        edit_task(number, new_title)
+
+    elif choice == "6":
         break
+
     else:
         print("Неизвестная команда.")
