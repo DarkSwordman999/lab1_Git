@@ -24,11 +24,20 @@ def complete_task(number):
         print("Неверный номер задачи.")
 
 
+def delete_task(number):
+    if 1 <= number <= len(tasks):
+        tasks.pop(number - 1)
+        print("Задача удалена.")
+    else:
+        print("Неверный номер задачи.")
+
+
 while True:
     print("\n1 - Показать задачи")
     print("2 - Добавить задачу")
     print("3 - Выполнить задачу")
-    print("4 - Выход")
+    print("4 - Удалить задачу")
+    print("5 - Выход")
 
     choice = input("Выберите действие: ")
 
@@ -41,6 +50,9 @@ while True:
         number = int(input("Введите номер задачи: "))
         complete_task(number)
     elif choice == "4":
+        number = int(input("Введите номер задачи: "))
+        delete_task(number)
+    elif choice == "5":
         break
     else:
         print("Неизвестная команда.")
